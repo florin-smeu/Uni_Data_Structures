@@ -1,0 +1,43 @@
+Nume: Smeu Florin-Ion
+Grupa: 312 CD
+	
+			    Structuri de Date
+		        Tema 2: Cautari de Produse
+
+
+	In cadrul acestei teme am implementat functiile de interfata ale ar-
+borelui AVL folosit pentru crearea dictionarului.
+	
+	Cele doua functii 'createTree' si 'createTreeNode' creeaza arborele,
+respectiv un nod al acestuia. De asemenea, 'destroyTreeNode' este folosuta 
+pentru a dealoca memoria aferenta unui nod al arborelui. Functia 'isEmpty' 
+verifica daca arborele este vid.
+	
+	Functia 'search' cauta un anumit element in arbore, 'minimum' si 
+'maximum' returneaza pointeri la cel mai mic, respectiv cel mai mare element al
+arborelui AVL, iar 'successor' si 'predecesor' returneaza elementul care succe-
+de, respectiv precede elementul pe care il primesc ca parametru.
+	
+	Pentru a pastra echilibrul unui arbore AVL este necesar sa efectuam ro-
+tatii, in functie de ce elemente inseram, iar acest lucru este realizat de 
+functiile 'avlRotateLeft', 'avlRotateRight', 'avlGetBalance', 'updateHeight' si 
+'avlFixUp'.
+
+	Inserarea de noi elemente in arbore este implementata cu ajutorul func-
+tiei 'insert'. In cazul in care elementul care se doreste a fi inserat exista 
+deja in arbore, acesta este introdus doar in lista asociata, tinand cont daca
+nodul care il va precede (in lista) este sau nu duplicat. Pe de alta parte, da-
+ca nu avem acel element in arbore, se gaseste locul in care trebuie inserat si
+este avuta in vedere si realizarea legaturilor aferente listei.
+
+	Stergerea unui element se realizeaza apeland functia 'delete' si, de
+asemenea, verificand daca elementul de sters este duplicat sau nu. In caz afir-
+mativ el este sters doar din lista. Altfel este eliminat din arbore si acesta
+trebuie reechilibrat.
+
+	Pentru dealocarea intregii memorii aferente arborelui am creat functia
+'destroyTree'. Elementele sunt inserate in arborele AVL si intr-o lista dublu
+inlantuita ordonata. Din acest motiv putem folosi lista, pentru dealocare.
+	
+			   
+	  
