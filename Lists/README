@@ -1,10 +1,15 @@
-Smeu Florin-Ion
-312 CD
+Autor: Smeu Florin-Ion
+Email: florin.ion.smeu@gmail.com
 
-				  TEMA 1
+
+			     ====================
+			     EFICIENTIZARE GHISEE
+			     ====================
+			     
 	
-	In rezolvarea temei am creat anumite functii a caror utilitate o voi 
-explica mai jos.
+	Tema presupunea imbunatatirea modului de functionare al unui oficiu de 
+relatii cu clientii. Tipul de date folosit este lista dublu-inlantuita. In 
+rezolvarea ei am creat anumite functii a caror utilitate o voi explica mai jos.
 
 	 Deoarece nu puteam sti numarul de ghisee deschise la un anumit moment,
 am considerat variabila globala 'dimensiune', care sa retina acest lucru.
@@ -24,15 +29,8 @@ am creat o functie care aloca un nou nod intr-o lista ('aloca_celula').
 
 	Pentru implementarea functiei 'sterge_persoana' am avut nevoie si de 
 functia 'dezaloca_celula', care elibereaza memoria alocata pentru a retine
-informatiile despre o anumita persoana (ce reprezinta un nod al unei liste).  		 
+informatiile despre o anumita persoana (ce reprezinta un nod al unei liste).
+
+	Uilizare:
 	
-	Pentru celelalte functii pe care le-am avut de implementat:
-	- inchide_ghisee,
-	- sterge_primii_oameni,
-	- calculeaza_numar_oameni_ghiseu,
-	- calculeaza_numar_total_oameni,
-	- gaseste_pozitie_persoana,
-	- gaseste_persoana_din_fata,
-	- afiseaza_rand_ghiseu,
-consider comentariile din cod suficiente pentru a explica modul in care am
-procedat.
+	run.sh
