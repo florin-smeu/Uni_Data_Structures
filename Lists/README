@@ -1,0 +1,38 @@
+Smeu Florin-Ion
+312 CD
+
+				  TEMA 1
+	
+	In rezolvarea temei am creat anumite functii a caror utilitate o voi 
+explica mai jos.
+
+	 Deoarece nu puteam sti numarul de ghisee deschise la un anumit moment,
+am considerat variabila globala 'dimensiune', care sa retina acest lucru.
+	
+	Pentru deschiderea de noi ghisee se disting doua cazuri:
+	a) niciun ghiseu nu fusese deschis inainte, drept urmare am folosit 
+functia 'aloca_ghisee', care aloca un numar 'n' de ghisee;
+	b) in prealabil fusesera deschise anumite ghisee, deci am retinut toate
+informatiile despre persoanele care stateau la coada intr-o noua lista.
+Aceasta lista am obtinut-o interclasand pe rand listele ce reprezentau 
+ghiseele, cu ajutorul functiei 'interclaseaza_liste'. Apoi am redeschis numarul 
+dorit de ghisee si am distribuit in mod egal la fiecare ghiseu persoanele din 
+lista respectiva. Am facut aceasta utilizand functia 'redimensioneaza_ghisee'.
+
+	De asemenea, pentru adaugarea unei noi persoane la un anumit ghiseu, 
+am creat o functie care aloca un nou nod intr-o lista ('aloca_celula').
+
+	Pentru implementarea functiei 'sterge_persoana' am avut nevoie si de 
+functia 'dezaloca_celula', care elibereaza memoria alocata pentru a retine
+informatiile despre o anumita persoana (ce reprezinta un nod al unei liste).  		 
+	
+	Pentru celelalte functii pe care le-am avut de implementat:
+	- inchide_ghisee,
+	- sterge_primii_oameni,
+	- calculeaza_numar_oameni_ghiseu,
+	- calculeaza_numar_total_oameni,
+	- gaseste_pozitie_persoana,
+	- gaseste_persoana_din_fata,
+	- afiseaza_rand_ghiseu,
+consider comentariile din cod suficiente pentru a explica modul in care am
+procedat.
