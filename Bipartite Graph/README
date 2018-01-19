@@ -1,15 +1,17 @@
-Nume: Smeu Florin-Ion
-Grupa: 312CD
-	
-			           TEMA 3
-		     - la disciplina Structuri de Date -  
-	
-	
-	In rezolvarea acestei teme am folosit Algoritmul lui Kuhn, cunoscut si 
-sub denumirea de 'Algoritmul Ungar', deoarece se bazeaza pe rezultatele a doi 
-matematicieni maghiari: Konig si Egervary. 
-	In esenta, tema reprezinta o problema de afectare. Tinem cont de urma-
-toarea proprietate: Multimea solutiilor minime a unei probleme de afectare nu 
+Autor: Smeu Florin-Ion
+Email: florin.ion.smeu@gmail.com
+			
+			
+			     =============
+			     GRAF BIPARTIT
+			     =============
+			     
+					
+	In esenta, tema reprezinta rezolvarea unei probleme de afectare. Se 
+considera un graf bipartit (m si n cele doua parti). Cautam o asignare a 
+fiecarui nod din m la un singur nod din n, care sa aiba cost minim. Rezolvarea 
+se bazeaza pe Algoritmul lui Kuhn, explicat mai jos. Tinem cont de urmatoarea 
+proprietate: Multimea solutiilor minime a unei probleme de afectare nu 
 se modifica daca la toate elementele unei linii sau coloane a matricei costuri-
 lor se aduna acelasi numar real k. Matricea costurilor, in cazul nostru, conti-
 ne distantele dintre fiecare iepuras si fiecare vizuina, este denumita 'mat' si 
