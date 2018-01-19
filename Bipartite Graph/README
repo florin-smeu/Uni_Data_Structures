@@ -1,0 +1,75 @@
+Nume: Smeu Florin-Ion
+Grupa: 312CD
+	
+			           TEMA 3
+		     - la disciplina Structuri de Date -  
+	
+	
+	In rezolvarea acestei teme am folosit Algoritmul lui Kuhn, cunoscut si 
+sub denumirea de 'Algoritmul Ungar', deoarece se bazeaza pe rezultatele a doi 
+matematicieni maghiari: Konig si Egervary. 
+	In esenta, tema reprezinta o problema de afectare. Tinem cont de urma-
+toarea proprietate: Multimea solutiilor minime a unei probleme de afectare nu 
+se modifica daca la toate elementele unei linii sau coloane a matricei costuri-
+lor se aduna acelasi numar real k. Matricea costurilor, in cazul nostru, conti-
+ne distantele dintre fiecare iepuras si fiecare vizuina, este denumita 'mat' si 
+are tipul 'TElem'. Bineinteles, am fi putut lucra si cu matricea de adiacenta
+asociata grafului, insa ar fi fost mai ineficient din punct de vedere al memo-
+riei (stocam informatie redundanta) si codul ar fi devenit mai greu de urmarit 
+din cauza unor indici care nu ar fi fost foarte sugestivi. Din acest motiv, 
+am ales doar sa construiesc matricea de adiacenta si sa o folosesc doar pentru
+pasul 1 al algoritmului (a se vedea mai jos). Spre exemplu, matricea de adia-
+centa pentru testul 1 este: 
+	0 0 37 21 
+	0 0 44 13 
+	37 44 0 0 
+	21 13 0 0,
+iar matricea costurilor:
+	37 21
+	44 13.
+	De asemenea, algoritmul se bazeaza pe Teorema lui Konig: Pentru un graf 
+bipartit, numarul maxim de muchii ale unui cuplaj este egal cu numarul minim de
+varfuri ale unui suport. Cu alte cuvinte, o solutie a problemei de afectare co-
+respunde unui cuplaj al grafului bipartit. Voi descrie mai jos pasii prin care 
+am rezolvat tema.
+	1. Desi in cadrul acestui pas operam asupra matricei de adiacenta, ne
+vom referi doar la elementele care fac parte si din matricea costurilor (un 
+exemplu numeric este prezentat mai sus). Cautam elementul minim al fiecarei li-
+nii si il scadem din toate elementele liniei respective. Procedam la fel si
+pentru coloane. In acest moment, ne-am asigurat ca in cadrul matricei am creat
+cel putin un zerou pe fiecare linie respectiv coloana. Functia care realizeaza
+acest lucru este denumita 'create_zeros'. In cadrul ei sunt apelate functiile
+'get_min_item_row' si 'get_min_item_col', care returneaza elementul minim al 
+unei linii/coloane ale matricei. Pentru pasii urmatori toate operatiile se rea-
+lizeaza pe matricea costurilor.
+	2. Parcurgem matricea costurilor pe linii. Daca pe linia curenta regasim
+un singur zerou, atunci vom marca coloana care contine zeroul. In cadrul imple-
+mentarii din tema, matricea costurilor este formata din elemente care contin, pe
+langa distanta (campul 'value'), si informatia daca au fost marcate (campul 
+'state'). Initial toate elementele sunt nemarcate (state = 0), iar in urma unei
+marcari se incrementeaza campul 'state'. De asemenea, concomitent cu marcarea, 
+retinem pozitia in care am gasit zeroul intr-un vector. Daca regasim mai mult de
+un zerou pe o linie, nu se marcheaza nimic. Vom proceda in mod analog si pentru 
+coloanele matricei. Daca in cadrul coloanei curente se regaseste un singur 
+zerou, marcam linia care contine zeroul (adica incrementam campul 'state' al e-
+lementelor care o formeaza) Vom retine pozitia zeroului in vector, ca in cazul 
+liniilor. Cand gasim mai mult de un zerou pe coloana, nu efectuam nicio opera-
+tie. Verificam acum daca toate zerourile matricei  au fost marcate. In caz nega-
+tiv, repetam pasul 2 pana cand aceasta conditie este intrunita.
+	3. Vom cuantifica acum numarul de zerouri retinute la pasul precedent in
+vector. Daca acest numar este egal cu ordinul matricei costurilor, atunci putem
+sa trecem la pasul urmator. Insa, daca numarul de zerouri este mai mic, avem de
+facut urmatoarele operatii: 
+	- gasim  minimul elementelor care au ramas nemarcate (au campul state = 
+0);
+	- scadem acest minim din toate elementele nemarcate;
+	- adunam minimul la elementele matricei care au fost marcate de doua ori
+(adica, state = 2).
+	Dupa aceste modificari, vom reseta campul 'state' al tuturor elementelor
+din matrice (state = 0) si vom sterge informatia despre zerourile retinute in
+vector. Vom repeta acum pasii 2 si 3 pana cand retinem pozitiile unui numar de 
+zerouri care este egal cu ordinul matricei costurilor.
+	4. In acest moment stim cu siguranta ca solutia gasita este optima. Nu
+ne ramane decat sa adunam elementele din matricea de adiacenta situate in po-
+zitiile in care am memorat zerourile, intrucat aceasta este chiar rezultatul 
+minim pe care il puteam obtine.   
