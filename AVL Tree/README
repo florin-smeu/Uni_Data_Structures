@@ -1,12 +1,14 @@
 Nume: Smeu Florin-Ion
-Grupa: 312 CD
-	
-			    Structuri de Date
-		        Tema 2: Cautari de Produse
+Email: florin.ion.smeu@gmail.com
+				
+				
+		              ==========		
+			      ARBORE AVL
+			      ==========	
+			      
 
-
-	In cadrul acestei teme am implementat functiile de interfata ale ar-
-borelui AVL folosit pentru crearea dictionarului.
+	In cadrul acestei teme am implementat functiile de interfata ale unui
+arbore de tip AVL. 
 	
 	Cele doua functii 'createTree' si 'createTreeNode' creeaza arborele,
 respectiv un nod al acestuia. De asemenea, 'destroyTreeNode' este folosuta 
